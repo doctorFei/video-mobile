@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<title>detail</title>
+		<link rel="stylesheet" href="/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/css/detail.css" />
+	</head>
+	<body>
+		<div class="detail_box">
+			<!--主页头部样式-->
+			<div class="detail_header">
+				<div class="detail_header">
+					<div class="back">
+						<a href="/">
+							<span>&lt</span> 返回
+						</a>
+					</div>
+					<div class="title">
+						{{detailMovie.movie.name}}
+					</div>
+				</div>
+			</div>
+			<!--视频播放区-->
+			<div class="vidio_play">
+				<div class="vidio_play_top">
+					<video id="videoPlay" poster="/image/jzb.png" >
+						<source src="/video/003.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="control">
+					<span class="current_time">
+						00:00
+					</span>
+					<div class="control_c">
+						<div class="control_in"></div>
+					</div>
+					<span class="all_time">00.00</span>
+					<span class="screen"></span>
+				</div>
+				
+				<div class="play">
+					<img src="/image/play.png"/>
+				</div>
+			</div>
+			<div class="introduce">
+				<div class="left">
+					<div class="introduce-title clearfix">
+						<span>{{detailMovie.movie.name}}</span>
+						<span>{{detailMovie.movie.different}}</span>
+						<span>¥{{detailMovie.movie.price}}</span>
+					</div>
+					<div class="small">
+						<span>{{detailMovie.movie.director}}</span>
+						<span>233次播放</span>
+						<span>原价：¥{{detailMovie.movie.preprice}}</span>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	</body>
+	<script src="/js/video.js" type="text/javascript" charset="utf-8"></script>
+</html>

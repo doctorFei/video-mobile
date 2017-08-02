@@ -1,0 +1,53 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-family: Microsoft Yahei, Tahoma, Geneva, sans-serif;
+    /*清楚移动端默认的 点击高亮效果*/
+    -webkit-tap-highlight-color:transparent;
+    /*怪异和模型*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html{
+    font-size: -webkit-calc(100vw/7.2);
+    font-size: -moz-calc(100vw/7.2);
+}
+body{
+    font-size: 0.24rem;
+    color: #333;
+}
+a{
+    color: #333333;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+input{
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+}
+ul,ol{
+	list-style: none;
+}
+
+/*command css*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: '';
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}

@@ -1,0 +1,127 @@
+body{
+	/* 加载背景图 */
+	background-image: url(/image/login_bg.jpg);
+	/* 背景图垂直、水平均居中 */
+	background-position: center center;
+	/* 背景图不平铺 */
+	background-repeat: no-repeat;
+	/* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+	background-attachment: fixed;
+	/* 让背景图基于容器大小伸缩 */
+	background-size: cover;
+	/* 设置背景颜色，背景图加载过程中会显示背景色 */
+	background-color: #464646;
+}
+
+.login_box{
+	
+	
+}
+
+/*login_header头部样式*/
+.login_header{
+	height:0.84rem;
+	background:#000000;
+	position: relative;
+}
+.login_header>.back{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.login_header>.back a{
+	display: block;
+	color: #E2E1E5;
+	line-height:0.84rem;
+	margin-left: 0.24rem;
+	font-size: 0.3rem;
+}
+.login_header>.title{
+	line-height:0.84rem;
+	color: #E2E1E5;
+	text-align: center;
+	letter-spacing:0.06rem;
+}
+/*头像部分*/
+.photo{
+	margin-top: 1.2rem;
+	position: relative;
+	margin-bottom: 0.9rem;
+	height: 1.62rem;
+}
+.photo>a{
+	position: absolute;
+	width: 1.62rem;
+	height: 1.62rem;
+	top: 0;
+	left: 50%;
+	margin-left: -0.81rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.photo>a>img{
+	display: block;
+	width: 100%;
+}
+
+/*表单部分*/
+.form_group{
+	padding: 0 1.06rem;
+}
+.form_group .tel{
+	margin-bottom: 0.28rem;
+}
+.form_group .tel input{
+	display: block;
+	width: 100%;
+	height: 0.74rem;
+	padding-left: 0.22rem;
+	background-color: rgba(255,255,255,0.5);
+	border: 1px solid #959595;
+	border-radius: 0.08rem;
+	font-size: 0.24rem;
+}
+.form_group .tel input::input-placeholder {
+　　    color:#70706f;
+	font-size: 0.24rem;
+}
+.form_group .tel input::-webkit-input-placeholder { /* WebKit browsers */
+　　    color:#70706f;
+	font-size: 0.24rem;
+}
+
+.form_group .password{
+	margin-bottom: 0.28rem;
+}
+.form_group .password input[type=text]{
+	float: left;
+	width: 60%;
+	height: 0.74rem;
+	padding-left: 0.22rem;
+	background-color: rgba(255,255,255,0.5);
+	border: 1px solid #959595;
+	border-radius: 0.08rem;
+	font-size: 0.24rem;
+}
+.form_group .password input[type=text]::-webkit-input-placeholder { /* WebKit browsers */
+　　    color:#70706f;
+	font-size: 0.24rem;
+}
+.form_group .password input[type=button]{
+	float: right;
+	width: 35%;
+	height: 0.74rem;
+	border: 1px solid #896326;
+	border-radius: 0.08rem;
+	color: #896326;
+	background: #edcd58;
+}
+.form_group .login input{
+	display: block;
+	width: 100%;
+	height: 0.74rem;
+	border: 1px solid #896326;
+	border-radius: 0.08rem;
+	color: #896326;
+	background: #edcd58;
+}

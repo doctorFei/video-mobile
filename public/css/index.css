@@ -1,0 +1,188 @@
+.index_box{
+	padding-top: 0.84rem;
+	background: #F4F4F4;
+	padding-bottom: 1.2rem;
+}
+/*login_header头部样式*/
+.index_header{
+	height:0.84rem;
+	background:#000000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9999;
+}
+.index_header>.back{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.index_header>.back a{
+	display: block;
+	color: #E2E1E5;
+	line-height:0.84rem;
+	margin-left: 0.24rem;
+	font-size: 0.3rem;
+}
+.index_header>.title{
+	line-height:0.84rem;
+	color: #E2E1E5;
+	text-align: center;
+	letter-spacing:0.06rem;
+}
+/*视频列表部分*/
+.video_list{
+	padding: 0.46rem 0.3rem;
+}
+.videoTop{
+	width: 3.2rem;
+	height: 1.8rem;
+	position: relative;
+	margin-bottom: 2px;
+	border-radius: 0.06rem;
+	overflow: hidden;
+}
+.videoTop>img{
+	width: 100%;
+	height: 100%;
+}
+.video_list>ul>li{
+	float: left;
+}
+.video_list>ul>li:nth-child(2n+1){
+	margin-right: 0.2rem;
+}
+.videoTop .play{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.videoTop .play img{
+	position: absolute;
+	width: 0.8rem;
+	height: 0.74rem;
+	top: 50%;
+	left: 50%;
+	margin-left: -0.4rem;
+	margin-top: -0.37rem;
+}
+.videoBottom .vidioTitle{
+	line-height: 0.3rem;
+	font-size: 0.22rem;
+	
+}
+.videoBottom .vidioTitle span:first-child{
+	float: left;
+}
+
+.videoBottom .vidioTitle span:last-child{
+	float: right;
+	color: #ffa200;
+}
+.videoBottom .videoHot{
+	line-height: 0.3rem;
+	font-size: 0.18rem;
+	color: #666;
+}
+/*底部*/
+.footer{
+	position: fixed;
+	width: 100%;
+	height: 1.2rem;
+	background: #070E16;
+	left: 0;
+	bottom: 0;
+}
+.footer>ul{
+	display: flex;
+	display: -webkit-flex;
+	justify-content:space-between;
+	align-items:center;
+	height: 100%;
+	
+}
+.footer>ul a{
+	font-size: 0.24rem;
+}
+.footer>ul>li>a{
+	color: #788491;
+	font-size: 0.24rem;
+	display: block;
+}
+.footer>ul>li>a p{
+	line-height: 0.3rem;
+}
+.footer>ul>li a span{
+	display: block;
+	width: 0.5rem;
+	height: 0.5rem;
+	margin: 0 auto;
+}
+/*婚礼*/
+.footer>ul .wedding .no span{
+	background: url(/image/hl.png) center center no-repeat;
+	background-size: 100%;
+}
+
+.footer>ul .wedding .yes span{
+	background: url(/image/hl_y.png) center center no-repeat;
+	background-size: 100%;
+}
+.footer>ul .wedding .yes p{
+	color: #ffc900;
+}
+/*表白*/
+.footer>ul .confession .no span{
+	background: url(/image/bb.png) center center no-repeat;
+	background-size: 100%;
+}
+
+.footer>ul .confession .yes span{
+	background: url(/image/bb_y.png) center center no-repeat;
+	background-size: 100%;
+}
+.footer>ul .confession .yes p{
+	color: #ffc900;
+}
+/*生日*/
+.footer>ul .birthday .no span{
+	background: url(/image/sr.png) center center no-repeat;
+	background-size: 100%;
+}
+
+.footer>ul .birthday .yes span{
+	background: url(/image/sr_y.png) center center no-repeat;
+	background-size: 100%;
+}
+.footer>ul .birthday .yes p{
+	color: #ffc900;
+}
+/*朋友圈*/
+.footer>ul .friends .no span{
+	background: url(/image/py.png) center center no-repeat;
+	background-size: 100%;
+}
+
+.footer>ul .friends .yes span{
+	background: url(/image/py_y.png) center center no-repeat;
+	background-size: 100%;
+}
+.footer>ul .friends .yes p{
+	color: #ffc900;
+}
+/*企业*/
+.footer>ul .enterprise .no span{
+	background: url(/image/qy.png) center center no-repeat;
+	background-size: 100%;
+}
+
+.footer>ul .enterprise .yes span{
+	background: url(/image/qy_y.png) center center no-repeat;
+	background-size: 100%;
+}
+.footer>ul .enterprise .yes p{
+	color: #ffc900;
+}

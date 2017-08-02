@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>主页</title>
+		<link rel="stylesheet" href="/css/base.css">
+		<link rel="stylesheet" type="text/css" href="/css/index.css" />
+		<!--<script src="/js/test.js" type="text/javascript" charset="utf-8"></script>-->
+	</head>
+
+	<body>
+		<div class="index_box">
+			<!--主页头部样式-->
+			<div class="index_header">
+				<div class="index_header">
+					<div class="back">
+						<a href="#">
+							<span>&lt</span> 返回
+						</a>
+					</div>
+					<div class="title">
+						微逼格—你的视频营销神器
+					</div>
+				</div>
+			</div>
+			<!--视频列表部分-->
+			<div class="video_list">
+				<ul class="clearfix">
+					{{#each movieList as |movie|}}
+					<li>
+						<div class="videoTop">
+							<img src="/image/jz.png" />
+							<a href="/movie/{{movie.id}}" class="play">
+								<img src="/image/play.png" />
+							</a>
+						</div>
+						<div class="videoBottom">
+							<p class="vidioTitle clearfix">
+								<span>{{movie.name}}</span>
+								<span>{{movie.num}}</span>
+							</p>
+							<p class="videoHot">
+								9999次播放
+							</p>
+						</div>
+					</li>
+					 {{/each}}
+				</ul>
+			</div>
+			<!--底部-->
+			<div class="footer">
+				<ul class="clearfix">
+	                <li class="wedding">
+	                    <a href="#" class="yes">
+	                        <span></span>
+	                        <p>婚礼</p>
+	                    </a>
+	                </li>
+	                <li class="confession">
+	                    <a href="#" class="no">
+	                      	<span></span>
+	                        <p>表白</p>
+	                    </a>
+	                </li>
+	                <li class="birthday">
+	                    <a href="#" class="no">
+	                        <span></span>
+	                        <p>生日</p>
+	                    </a>
+	                </li>
+	                <li class="friends">
+	                    <a href="#" class="no">
+	                        <span></span>
+	                        <p>朋友圈小视频</p>
+	                    </a>
+	                </li><li class="enterprise">
+		                <a href="#" class="no">
+		                    <span></span>
+		                    <p>企业宣传</p>
+		                </a>
+		            </li>
+	            </ul>
+			</div>
+		</div>
+	</body>
+</html>
