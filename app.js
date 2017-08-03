@@ -69,7 +69,7 @@ app.get('/login',function(req,res){
 });
 //登录页post验证
 app.post('/login',function(req,res){
-	console.log('本次登录的session信息是'+req.body.user);
+	console.log(' the session are'+req.body.user);
 	req.session.user = req.body.user;
     var id =req.session.mid;  //用户点击的电影对应的id 
 	var result=Movie.getDetailMovie(id);
