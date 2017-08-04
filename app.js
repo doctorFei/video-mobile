@@ -3,12 +3,12 @@
  */
 var express=require('express');
 var app=express();
-var Movie = require('./data/movie');
-var flash = require('connect-flash');
+var Movie = require('./data/movie');//数据筛选模块
+//body-parser Node.js(Express) HTTP请求体解析中间件
 var bodyParser = require('body-parser');
-//var crypto = require('crypto');
 var session = require('express-session');
 var cookieParser = require('cookie-parser');
+//静态资源加载路径，这样写后，所有静态资源的引用都默认在public下直接写
 app.use(express.static('public'));
 //加载hbs模块
 var hbs = require('hbs');
@@ -18,14 +18,13 @@ app.set('view engine','html');
 app.set('views', './views');
 //运行hbs模块
 app.engine('html',hbs.__express);
+//设置cookie的方法
 app.use(cookieParser('sessiontest'));
 app.use(session({
     secret: 'sessiontest',//与cookieParser中的一致
     resave: true,
     saveUninitialized:true
 }));
-//使用flash模块
-app.use(flash());
 //post解析规则
 app.use(bodyParser.urlencoded({
     extended: true   //注意false和true的区别
@@ -38,13 +37,14 @@ var server=app.listen(3000,function(){
 
 /**路由渲染
 Express的模板引擎常用的是ejs和jade。它预留了变量，res.render()就是将我们的数据填充到模板后展示出完整的页面。*/
+//主页路由
 app.get('/',function(req,res){
 	var movieList=Movie.homeMovie;
     res.render('index',{
         movieList:movieList.movie
     })
 });
-
+//详情页路由
 app.get('/movie/:id',function(req,res){
 	var id = req.params.id;  //用户点击的电影对应的id 
 	req.session.mid=id;
@@ -61,10 +61,9 @@ app.get('/movie/:id',function(req,res){
 		res.redirect('/login');
 	}
 });
-
+//登录页路由
 app.get('/login',function(req,res){
     res.render('login',{
-//      title:'imooc login'
     })
 });
 //登录页post验证
